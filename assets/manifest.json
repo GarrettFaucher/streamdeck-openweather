@@ -1,0 +1,42 @@
+{
+	"Name": "Open Weather",
+	"Author": "Garrett Faucher",
+	"Version": "0.1.0",
+	"Description": "Display current weather on a Stream Deck key using OpenWeatherMap",
+	"Icon": "icon",
+	"CategoryIcon": "icon",
+	"Category": "Open Weather",
+	"URL": "https://github.com/garrettfaucher/streamdeck-openweather",
+	"SDKVersion": 2,
+	"PropertyInspectorPath": "pi/main_pi.html",
+	"OS": [
+		{ "Platform": "linux" },
+		{ "Platform": "mac", "MinimumVersion": "10.15" },
+		{ "Platform": "windows", "MinimumVersion": "10" }
+	],
+	"CodePaths": {
+		"x86_64-pc-windows-msvc": "oaopenweather-x86_64-pc-windows-msvc.exe",
+		"x86_64-apple-darwin": "oaopenweather-x86_64-apple-darwin",
+		"aarch64-apple-darwin": "oaopenweather-aarch64-apple-darwin",
+		"x86_64-unknown-linux-gnu": "oaopenweather-x86_64-unknown-linux-gnu",
+		"aarch64-unknown-linux-gnu": "oaopenweather-aarch64-unknown-linux-gnu"
+	},
+	"CodePathWin": "oaopenweather-x86_64-pc-windows-msvc.exe",
+	"CodePathMac": "oaopenweather-x86_64-apple-darwin",
+	"CodePathLin": "oaopenweather-x86_64-unknown-linux-gnu",
+	"Actions": [
+		{
+			"UUID": "com.garrettfaucher.openweather.action",
+			"Name": "Weather",
+			"Icon": "imgs/weather",
+			"Tooltip": "Show current temperature and animated weather icon for a city",
+			"Controllers": ["Keypad"],
+			"PropertyInspectorPath": "pi/main_pi.html",
+			"States": [{
+				"Image": "imgs/weather",
+				"TitleAlignment": "bottom",
+				"FontSize": "10"
+			}]
+		}
+	]
+}
